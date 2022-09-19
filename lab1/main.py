@@ -4,6 +4,7 @@ from matplotlib import pyplot as plt
 import cv2
 
 from img_process import trim, decompose_mag_pha
+from psnr import calculate_psnr
 
 # Load images
 im1 = cv2.imread('./data/IMG_3084.JPG',0)
@@ -49,3 +50,8 @@ imgCombined2 = np.real(np.fft.ifft2(combined_mag_im2_pha_im1))
 # Save exchanged reconstruction images
 plt.imsave('./result/exchanged_reconstruction/combined_mag_im1_pha_im2.JPG',imgCombined1,cmap='gray')
 plt.imsave('./result/exchanged_reconstruction/combined_mag_im2_pha_im1.JPG',imgCombined2,cmap='gray')
+
+# Calculate PSNR 
+psnr_im1_comb2=calculate_psnr(im1_trimmed, imgCombined2)
+psnr_im2_comb1=calculate_psnr(im2_trimmed, imgCombined1)
+print('psnr_im1_comb2:',psnr_im1_comb2,", psnr_im2_comb1:",psnr_im2_comb1 )
