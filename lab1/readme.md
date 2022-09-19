@@ -11,32 +11,32 @@
 - [x] A와 B사진에서 얻은 magnitude, phase 성분을 바꾸어 inverse DFT를 한다.
 - [x] phase, magnitude 가공하여 얻은 두 이미지를 원본 이미지와 비교한다.
 - [x] Calculate PSNR(peak-to-peak SNR)
-  
+
 ## Result
 1. 원본 이미지를 trim 후 gray image로 변경.  
-  image1 / image2.   
-  <p style="float:left" class="half">
-    <img src="./result/trimmed_img/IMG_3084_trimmed.JPG" alt="trim and grayed image 1" style="height: 200px; width:200px;"/>
-    <img src="./result/trimmed_img/IMG_3376_trimmed.JPG" alt="trim and grayed image 1" style="height: 200px; width:200px;"/>.  
-  </p>
-2. DFT 돌린후 spectrum을 구한다.   </br>
-  image 1 magnitude / image 1 phase
-  <p class="half" style="float:left">  
-    <img src='./result/spectrum/IMG_3084_dft_mag.JPG' style="width:200px; height:200px;"/>
-    <img src='./result/spectrum/IMG_3084_dft_phase.JPG' style="width:200px; height:200px;"/>
-  </pr>    
-  </br>
-  image 2 magnitude / image 2 phase.    
-  <p style="float:left">
-     <img src='./result/spectrum/IMG_3376_dft_mag.JPG' style="width:200px; height:200px;"/>
-     <img src='./result/spectrum/IMG_3376_dft_phase.JPG' style="width:200px; height:200px;"/>
-  </p>
- 3. A와 B사진에서 얻은 magnitude, phase 성분을 바꾸어 inverse DFT를 한다.</br>
-  image 1 magnitude & image 2 phase. / image 2 magnitude & image 1 phase.   
-  <p style="float:left">
-    <img src='./result/exchanged_reconstruction/combined_mag_im1_pha_im2.JPG' style="width:200px; height:200px;"/>
-    <img src='./result/exchanged_reconstruction/combined_mag_im2_pha_im1.JPG' style="width:200px; height:200px;"/>
-  </p>
+    image1 / image2.   
+    <div>
+        <img src="./result/trimmed_img/IMG_3084_trimmed.JPG" alt="trim and grayed image 1" style="height: 200px; width:200px;"/>
+        <img src="./result/trimmed_img/IMG_3376_trimmed.JPG" alt="trim and grayed image 1" style="height: 200px; width:200px;"/>.  
+    </div>
+  
+2. DFT 돌린후 spectrum을 구한다.   
+    image 1 magnitude / image 1 phase
+    <div>  
+        <img src='./result/spectrum/IMG_3084_dft_mag.JPG' style="width:200px; height:200px;"/>
+        <img src='./result/spectrum/IMG_3084_dft_phase.JPG' style="width:200px; height:200px;"/>
+    </div>    
+    image 2 magnitude / image 2 phase.    
+    <div>
+        <img src='./result/spectrum/IMG_3376_dft_mag.JPG' style="width:200px; height:200px;"/>
+        <img src='./result/spectrum/IMG_3376_dft_phase.JPG' style="width:200px; height:200px;"/>
+    </div>
+3. A와 B사진에서 얻은 magnitude, phase 성분을 바꾸어 inverse DFT를 한다.</br>
+    image 1 magnitude & image 2 phase. / image 2 magnitude & image 1 phase.   
+    <div>
+        <img src='./result/exchanged_reconstruction/combined_mag_im1_pha_im2.JPG' style="width:200px; height:200px;"/>
+        <img src='./result/exchanged_reconstruction/combined_mag_im2_pha_im1.JPG' style="width:200px; height:200px;"/>
+    </div>
 4. PSNR 계산한다.  
     PSNR criterion.   
     $$(PSNR) = 20log_{10}\frac{(peak-to-peak\space value)}{{\sigma_{ms}}}$$
