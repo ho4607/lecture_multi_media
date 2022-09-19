@@ -14,29 +14,34 @@
   
 ## Result
 1. 원본 이미지를 trim 후 gray image로 변경.  
-image1 / image2.   
-<img src="./result/trimmed_img/IMG_3084_trimmed.JPG" alt="trim and grayed image 1" style="height: 200px; width:200px;"/>
-<img src="./result/trimmed_img/IMG_3376_trimmed.JPG" alt="trim and grayed image 1" style="height: 200px; width:200px;"/>.  
-2. DFT 돌린후 spectrum을 구한다.   
-   image 1 magnitude / image 1 phase.  
-<img src='./result/spectrum/IMG_3084_dft_mag.JPG' style="width:200px; height:200px;"/>
-<img src='./result/spectrum/IMG_3084_dft_phase.JPG' style="width:200px; height:200px;"/>.  
-image 2 magnitude / image 2 phase.  
-<img src='./result/spectrum/IMG_3376_dft_mag.JPG' style="width:200px; height:200px;"/>
-<img src='./result/spectrum/IMG_3376_dft_phase.JPG' style="width:200px; height:200px;"/>
+  image1 / image2.   
+  <p style="float:left" class="half">
+    <img src="./result/trimmed_img/IMG_3084_trimmed.JPG" alt="trim and grayed image 1" style="height: 200px; width:200px;"/>
+    <img src="./result/trimmed_img/IMG_3376_trimmed.JPG" alt="trim and grayed image 1" style="height: 200px; width:200px;"/>.  
+  </p>
+2. DFT 돌린후 spectrum을 구한다.   </br>
+  image 1 magnitude / image 1 phase.  
+  <p class="half" style="float:left">  
+    <img src='./result/spectrum/IMG_3084_dft_mag.JPG' style="width:200px; height:200px;"/>
+    <img src='./result/spectrum/IMG_3084_dft_phase.JPG' style="width:200px; height:200px;"/>
+  </pr>    
+   
+  image 2 magnitude / image 2 phase.   
+  <p style="float:left">
+     <img src='./result/spectrum/IMG_3376_dft_mag.JPG' style="width:200px; height:200px;"/>
+     <img src='./result/spectrum/IMG_3376_dft_phase.JPG' style="width:200px; height:200px;"/>
+  </p>
 3. A와 B사진에서 얻은 magnitude, phase 성분을 바꾸어 inverse DFT를 한다.   
-image 1 magnitude & image 2 phase. / image 2 magnitude & image 1 phase.     
-<img src='./result/exchanged_reconstruction/combined_mag_im1_pha_im2.jpg' style="width:200px; height:200px;"/>
-<img src='./result/exchanged_reconstruction/combined_mag_im2_pha_im1.jpg' style="width:200px; height:200px;"/>
+  image 1 magnitude & image 2 phase. / image 2 magnitude & image 1 phase.   
+  <p style="float:left">
+    <img src='./result/exchanged_reconstruction/combined_mag_im1_pha_im2.jpg' style="width:200px; height:200px;"/>
+    <img src='./result/exchanged_reconstruction/combined_mag_im2_pha_im1.jpg' style="width:200px; height:200px;"/>
+  </p>
 4. PSNR 계산한다.  
-    PSNR criterion.  
-    $$
-    (PSNR) = 20log_{10}\frac{(peak-to-peak\space value)}{{\sigma_{ms}}}
-    $$
+    PSNR criterion.   
+    $$(PSNR) = 20log_{10}\frac{(peak-to-peak\space value)}{{\sigma_{ms}}}$$
     Mean square criterion.  
-    $$
-    \sigma_{ms}^2 = \frac{1}{MN}\sum^M_{m=1}\sum^N_{n=1}|u(m,n)-u'(m.n)|^2
-    $$
+    $$\sigma_{ms}^2 = \frac{1}{MN}\sum^M_{m=1}\sum^N_{n=1}|u(m,n)-u'(m.n)|^2$$
 
     image1과 합성된 두번째 이미지 : 10.996961195527655   
     image2와 합성된 첫번째 이미지 : 10.996961195527655
