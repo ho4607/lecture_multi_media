@@ -34,8 +34,8 @@
  3. A와 B사진에서 얻은 magnitude, phase 성분을 바꾸어 inverse DFT를 한다.</br>
   image 1 magnitude & image 2 phase. / image 2 magnitude & image 1 phase.   
   <p style="float:left">
-    <img src='./result/exchanged_reconstruction/combined_mag_im1_pha_im2.jpg' style="width:200px; height:200px;"/>
-    <img src='./result/exchanged_reconstruction/combined_mag_im2_pha_im1.jpg' style="width:200px; height:200px;"/>
+    <img src='./result/exchanged_reconstruction/combined_mag_im1_pha_im2.JPG' style="width:200px; height:200px;"/>
+    <img src='./result/exchanged_reconstruction/combined_mag_im2_pha_im1.JPG' style="width:200px; height:200px;"/>
   </p>
 4. PSNR 계산한다.  
     PSNR criterion.   
