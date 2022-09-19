@@ -20,18 +20,18 @@
     <img src="./result/trimmed_img/IMG_3376_trimmed.JPG" alt="trim and grayed image 1" style="height: 200px; width:200px;"/>.  
   </p>
 2. DFT 돌린후 spectrum을 구한다.   </br>
-  image 1 magnitude / image 1 phase.  
+  image 1 magnitude / image 1 phase
   <p class="half" style="float:left">  
     <img src='./result/spectrum/IMG_3084_dft_mag.JPG' style="width:200px; height:200px;"/>
     <img src='./result/spectrum/IMG_3084_dft_phase.JPG' style="width:200px; height:200px;"/>
   </pr>    
-   
-  image 2 magnitude / image 2 phase.   
+  </br>
+  image 2 magnitude / image 2 phase.    
   <p style="float:left">
      <img src='./result/spectrum/IMG_3376_dft_mag.JPG' style="width:200px; height:200px;"/>
      <img src='./result/spectrum/IMG_3376_dft_phase.JPG' style="width:200px; height:200px;"/>
   </p>
-3. A와 B사진에서 얻은 magnitude, phase 성분을 바꾸어 inverse DFT를 한다.   
+ 3. A와 B사진에서 얻은 magnitude, phase 성분을 바꾸어 inverse DFT를 한다.</br>
   image 1 magnitude & image 2 phase. / image 2 magnitude & image 1 phase.   
   <p style="float:left">
     <img src='./result/exchanged_reconstruction/combined_mag_im1_pha_im2.jpg' style="width:200px; height:200px;"/>
