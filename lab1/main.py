@@ -1,7 +1,7 @@
 from PIL import Image  # pillow
 import numpy as np
 from matplotlib import pyplot as plt
-import cv2
+import cv2 #opencv-opthon
 
 from img_process import trim, decompose_mag_pha
 from psnr import calculate_psnr
@@ -52,6 +52,9 @@ plt.imsave('./result/exchanged_reconstruction/combined_mag_im1_pha_im2.JPG',imgC
 plt.imsave('./result/exchanged_reconstruction/combined_mag_im2_pha_im1.JPG',imgCombined2,cmap='gray')
 
 # Calculate PSNR 
+psnr_im1_comb1=calculate_psnr(im1_trimmed, imgCombined1)
 psnr_im1_comb2=calculate_psnr(im1_trimmed, imgCombined2)
 psnr_im2_comb1=calculate_psnr(im2_trimmed, imgCombined1)
-print('psnr_im1_comb2:',psnr_im1_comb2,", psnr_im2_comb1:",psnr_im2_comb1 )
+psnr_im2_comb2=calculate_psnr(im2_trimmed, imgCombined2)
+print('psnr_im1_comb1 / psnr_im1_comb2 / psnr_im2_comb1 / psnr_im2_comb2')
+print(psnr_im1_comb1, ' / ',psnr_im1_comb2,' / ', psnr_im2_comb1,' / ', psnr_im2_comb2)
