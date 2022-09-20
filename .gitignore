@@ -1,6 +1,6 @@
 # python cache 
 __pycache__/
-.DS_Store
-.vscode
-.zip
-.pdf
+*.DS_Store
+*.vscode
+*.zip
+*.pdf

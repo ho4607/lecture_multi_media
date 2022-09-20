@@ -1,5 +1,8 @@
 # 과제1 
 
+자세한 코드, 명세는 [여기](https://github.com/ho4607/lecture_multi_media/tree/main/lab1)에서 확인 가능합니다.   
+> 작성자 : 박성호, 융합전자공학부, 2017***883.  
+
 ## Hypothesis 
 우리가 생각하는 이미지의 중요한 부분들이 phase에 들어있을 것이다. 
 그리고 magnitude 성분은 low frequency 대역에 몰려 있을 것이다. 
