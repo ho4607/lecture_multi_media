@@ -4,3 +4,5 @@ __pycache__/
 *.vscode
 *.zip
 *.pdf
+*.idea
+*.ipynb_checkpoints
