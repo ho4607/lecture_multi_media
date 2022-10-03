@@ -1,31 +1,12 @@
 import numpy as np
 
-def random_idx_idy():
+# random matrix 1024 by 1024, composed of 0 and 1
+def makeRandomOneZeroMatrix1024by1024():
+    ran2d = np.zeros(2**20)
+    ran2d[:2**19] = 1
+    np.random.shuffle(ran2d)
     
-    return
-
-def shuffle_2D_matrix(matrix, seed, axis = 0):
-    """
-    Shuffle 2D matrix by column or row.
+    ran2dMat = ran2d.reshape(1024,1024)
+    opposite_ran2dMat = np.logical_not(ran2dMat)*1
     
-    Arguments:
-    matrix: 2D matrix to be shuffled
-    seed  : seed of numpy.random
-    axis  : zero - by column, non-zero - by row
-    
-    Returns:
-    shuffled_matrix: shuffled matrix
-    """
-    
-    np.random.seed(seed)
-    
-    if axis == 0: # by column
-        m = matrix.shape[1]
-        permutation = list(np.random.permutation(m))
-        shuffled_matrix = matrix[:, permutation]
-    else:          # by row
-        m = matrix.shape[0]
-        permutation = list(np.random.permutation(m))
-        shuffled_matrix = matrix[permutation, :]
-
-    return shuffled_matrix
+    return [ran2dMat, opposite_ran2dMat]
